@@ -1,11 +1,11 @@
-#!/bin/bash
 #include <stdio.h>
 
 /**
  * main - this is the main function
  *
- * return: end with zero
+ * Return: end with 0
  */
+
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
