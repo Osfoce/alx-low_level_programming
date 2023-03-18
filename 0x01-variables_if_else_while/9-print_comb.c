@@ -14,9 +14,12 @@ int main(void)
 
 	for (i = 48; i < 58; i++)
 	{
-		putchar(32);
 		putchar(i);
-		putchar(44);
+		if (i != 57)
+		{
+			putchar(32);
+			putchar(44);
+		}
 	}
 	putchar('\n');
 	return (0);
