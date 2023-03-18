@@ -10,13 +10,13 @@
 
 int main(void)
 {
-	int x = 'A';
+char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int i;
 
-	while (x <= 'Z')
+	for (i = 0; i < 26; i++)
 	{
-		x = tolower(x);
-		putchar(x);
-		x++;
+		putchar(alp[i]);
 	}
-
+	putchar('\n');
+	return (0);
 }
