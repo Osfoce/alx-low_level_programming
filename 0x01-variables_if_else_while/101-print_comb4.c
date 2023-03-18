@@ -7,7 +7,6 @@
  *
  * Return: zero
  */
-
 int main(void)
 {
 	int i, j, k;
@@ -28,7 +27,7 @@ int main(void)
 						putchar(44);
 						putchar(32);
 					}
-				}	
+				}
 			}
 		}
 	}
