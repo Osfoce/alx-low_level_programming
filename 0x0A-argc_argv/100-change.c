@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j, n, s, ch = 0;
+	int i, n, s, ch = 0;
 	int c[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
@@ -20,19 +20,19 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	s = atoi(argv[1]);
-	for (i = 1; i < argc; i++)
+	if (s < 1)
 	{
-		if (atoi(argv[i]) < 1)
-		{
-			printf("0\n");
-		}
-		for (j = 0; j < 5 && s; j++)
+		printf("0\n");
+	}
+	else
+	{
+		for (i = 0; i < 5 && s; i++)
 		{
 			n = s / c[i];
-			ch += n;
-			s -= n * c[i];
+			ch = ch + n;
+			s = s - n * c[i];
 		}
+		printf("%d\n", ch);
 	}
-	printf("%d\n", ch);
 	return (0);
 }
