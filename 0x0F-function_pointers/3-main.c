@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int x, y;
-	char *p;
+	char *op;
 
 	if (argc != 4)
 	{
@@ -19,19 +19,19 @@ int main(int argc, char *argv[])
 	}
 
 	x = atoi(argv[1]);
-	p = argv[2];
+	op = argv[2];
 	y = atoi(argv[3]);
 
-	if (get_p_func(p) == NULL || p[1] != '\0')
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((*p == '/' && y == 0) || (*p == '%' && y == 0))
+	if ((*op == '/' && y == 0) || (*op == '%' && y == 0))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", get_p_func(p)(x, y));
+	printf("%d\n", get_op_func(op)(x, y));
 	return (0);
 }
